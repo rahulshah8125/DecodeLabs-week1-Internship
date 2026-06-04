@@ -1,0 +1,143 @@
+DECODELAB WEEK1 OUTPUTS :-
+  
+
+TASK1:
+ 
+
+OrderID       Date CustomerID  Product  Quantity  ...  TrackingNumber ItemsInCart CouponCode ReferralSource TotalPrice
+0  ORD200000 2023-01-04     C72649  Monitor         5  ...     TRK37947903           7     SAVE10      Instagram    2853.10
+1  ORD200001 2024-08-23     C75739    Phone         2  ...     TRK91186779           3     SAVE10       Referral     302.70
+2  ORD200002 2024-02-27     C81728   Tablet         5  ...     TRK42903982           8   FREESHIP          Email    2753.40
+3  ORD200003 2023-10-15     C33540    Chair         1  ...     TRK62788070           5     SAVE10       Facebook     273.19
+4  ORD200004 2025-05-08     C81840  Printer         4  ...     TRK29241424           8     SAVE10          Email    2504.04
+
+[5 rows x 14 columns]
+
+Dataset Info:
+<class 'pandas.DataFrame'>
+RangeIndex: 1200 entries, 0 to 1199
+Data columns (total 14 columns):
+ #   Column           Non-Null Count  Dtype         
+---  ------           --------------  -----         
+ 0   OrderID          1200 non-null   str           
+ 1   Date             1200 non-null   datetime64[us]
+ 2   CustomerID       1200 non-null   str           
+ 3   Product          1200 non-null   str           
+ 4   Quantity         1200 non-null   int64         
+ 5   UnitPrice        1200 non-null   float64       
+ 6   ShippingAddress  1200 non-null   str           
+ 7   PaymentMethod    1200 non-null   str           
+ 8   OrderStatus      1200 non-null   str           
+ 9   TrackingNumber   1200 non-null   str           
+ 10  ItemsInCart      1200 non-null   int64         
+ 11  CouponCode       891 non-null    str           
+ 12  ReferralSource   1200 non-null   str           
+ 13  TotalPrice       1200 non-null   float64       
+dtypes: datetime64[us](1), float64(2), int64(2), str(9)
+memory usage: 131.4 KB
+None
+
+Rows and Columns:
+(1200, 14)
+
+Columns:
+Index(['OrderID', 'Date', 'CustomerID', 'Product', 'Quantity', 'UnitPrice',
+       'ShippingAddress', 'PaymentMethod', 'OrderStatus', 'TrackingNumber',
+       'ItemsInCart', 'CouponCode', 'ReferralSource', 'TotalPrice'],
+      dtype='str')
+
+Data Types:
+OrderID                       str
+Date               datetime64[us]
+CustomerID                    str
+Product                       str
+Quantity                    int64
+UnitPrice                 float64
+ShippingAddress               str
+PaymentMethod                 str
+OrderStatus                   str
+TrackingNumber                str
+ItemsInCart                 int64
+CouponCode                    str
+ReferralSource                str
+TotalPrice                float64
+dtype: object
+
+
+
+TASK2:
+   
+Dataset Shape Before Cleaning:
+(1200, 14)
+
+Missing Values Before Cleaning:
+OrderID              0
+Date                 0
+CustomerID           0
+Product              0
+Quantity             0
+UnitPrice            0
+ShippingAddress      0
+PaymentMethod        0
+OrderStatus          0
+TrackingNumber       0
+ItemsInCart          0
+CouponCode         309
+ReferralSource       0
+TotalPrice           0
+dtype: int64
+
+Duplicate Rows Before Cleaning:
+0
+
+Dataset Shape After Cleaning:
+(1200, 14)
+
+Missing Values After Cleaning:
+OrderID              0
+Date                 0
+CustomerID           0
+Product              0
+Quantity             0
+UnitPrice            0
+ShippingAddress      0
+PaymentMethod        0
+OrderStatus          0
+TrackingNumber       0
+ItemsInCart          0
+CouponCode         309
+ReferralSource       0
+TotalPrice           0
+dtype: int64
+
+Duplicate Rows After Cleaning:
+0
+
+Cleaned Dataset Preview:
+     OrderID       Date CustomerID  Product  Quantity  ...  TrackingNumber ItemsInCart CouponCode ReferralSource TotalPrice
+0  ORD200000 2023-01-04     C72649  Monitor         5  ...     TRK37947903           7     SAVE10      Instagram    2853.10
+1  ORD200001 2024-08-23     C75739    Phone         2  ...     TRK91186779           3     SAVE10       Referral     302.70
+2  ORD200002 2024-02-27     C81728   Tablet         5  ...     TRK42903982           8   FREESHIP          Email    2753.40
+3  ORD200003 2023-10-15     C33540    Chair         1  ...     TRK62788070           5     SAVE10       Facebook     273.19
+4  ORD200004 2025-05-08     C81840  Printer         4  ...     TRK29241424           8     SAVE10          Email    2504.04
+
+[5 rows x 14 columns]
+
+Cleaned dataset saved successfully!
+
+
+
+TASK3:
+
+ Date     Quantity    UnitPrice  ItemsInCart   TotalPrice
+count                 1200  1200.000000  1200.000000  1200.000000  1200.000000
+mean   2024-03-22 16:58:48     2.945833   356.412750     5.485000  1053.968300
+min    2023-01-01 00:00:00     1.000000    11.390000     1.000000    11.390000
+25%    2023-08-03 18:00:00     2.000000   186.062500     4.000000   410.520000
+50%    2024-03-23 00:00:00     3.000000   364.210000     5.000000   823.615000
+75%    2024-11-08 12:00:00     4.000000   521.570000     7.000000  1578.475000
+max    2025-06-30 00:00:00     5.000000   699.930000    10.000000  3456.400000
+std                    NaN     1.407557   197.177146     2.281983   819.856558
+Total Sales: 1264761.96
+Average Price: 356.41275
+Maximum Total Price: 3456.4
