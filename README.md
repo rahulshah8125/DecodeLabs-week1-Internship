@@ -80,3 +80,13 @@ The dataset contains order-related information such as:
 
 Successfully transformed raw online store transaction data into meaningful business insights through data analysis and visualization.
 
+---
+
+## 👨‍💻 Author
+
+**Rahul Shah**  
+Data Science Intern at DecodeLabs
+
+📊 Project developed as part of the DecodeLabs Data Science Internship Program.
+
+
